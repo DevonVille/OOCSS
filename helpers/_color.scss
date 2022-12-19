@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Color Classes
+   ========================================================================== */
+
+$global-colors-text: (
+  "white":     $color-white,
+  "black":     $color-black,
+  "darkgray":  $color-gray-dove,
+  "gray":      $color-gray-mirage,
+  "lightgray": $color-gray-boulder,
+  "light":     $color-blue-astral,
+  "lighter":   $color-blue-cerulean,
+  "dark":      $color-blue-astronaut,
+  "darker":    $color-blue-mattise,
+);
+
+
+/**
+ * Set just text colors, when the inverted color isn"t sufficient.
+ */
+
+@each $name, $value in $global-colors-text {
+
+  .color--#{$name} {
+    color: $value;
+  }
+}

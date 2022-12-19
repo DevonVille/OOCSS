@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+/**
+ * Redefine all of our basic heading styles against utility classes so as to
+ * allow for double stranded heading hierarchy, e.g. we semantically need an H2,
+ * but we want it to be sized like an H1:
+ *
+ *   <h2 class="h1"></h2>
+ *
+ * For clamp preffered sized see: https://bit.ly/3bea3xJ
+ *
+ */
+
+$font-sizes: (
+  "h0":  (125px, calc(6rem + 8vw), 250px),
+  "h1":  (32px, calc(1.3rem + 3vw), 80px),
+  "h2":  (25px, calc(1.3rem + 1vw), 40px),
+  "h3":  (20px, calc(1rem + 0.7vw), 32px),
+  "h4":  (18px, calc(0.8rem + 0.8vw), 28px),
+  "h5":  (18px, calc(0.8rem + 0.8vw), 23px),
+  "h6":  (16px, calc(0.9rem + 0.3vw), 20px),
+);
+
+@each $name, $value in $font-sizes {
+
+  $min: nth($value, 1);
+  $pref: nth($value, 2);
+  $max: nth($value, 3);
+
+  .#{$name} {
+    font-size: #{'clamp(#{$min}, #{$pref}, #{$max})'};
+    text-align: inherit;
+  }
+}

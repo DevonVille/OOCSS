@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Heading
+   ========================================================================== */
+
+/**
+ * Components of modern web pages tend to have very localised heading styles.
+ * Sometimes a h2 will be designed smaller than a h3 elsewhere.
+ * Heading design should be agnostic to its semantic outline placement.
+ * It makes much more sense to have them all inherit the same default size;
+ * Thus allowing granular design with utility classes (E.g. .u-h1, .u-h2).
+ *
+ * 1. Make headings inherit the same size as the surrounding text by default.
+ * 1. We don't necessarily want the font to be bolder, esp' when using custom fonts.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit; /* [1] */
+  font-weight: normal; /* [2] */
+  line-height: 1;
+}

@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Emulated Flex Gap
+   ========================================================================== */
+
+  /**
+  * https://coryrylan.com/blog/css-gap-space-with-flexbox
+  */
+
+@mixin flex-gap($gap, $axis: 'vertical') {
+  @if $axis == 'horizontal' {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  @if $axis == 'vertical' {
+    display: flex;
+    flex-flow: column;
+  }
+
+  margin: calc(-1 * #{$gap}) 0 0 calc(-1 * #{$gap});
+  width: calc(100% + #{$gap});
+
+  & > * { margin: #{$gap} 0 0 #{$gap}; }
+}

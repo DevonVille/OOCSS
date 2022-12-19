@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+/**
+ * The global settings file contains default variables overrides;
+ * Set it according to your specific project needs.
+ */
+
+$global-font-color:            #111d26;
+$global-font-family:           'Open Sans Hebrew', sans-serif;
+$global-font-size:             15px;
+$global-line-height:           1.5;
+
+$global-spacing:               20px;
+$global-container-width:       1920px;
+
+$global-border:                1px solid #d6d6d6;
+$global-shadow:                0 0 10px 0 rgba(0, 0, 0, 0.23);
+$global-shadow-light:          0 0 10px 0 rgba(30, 103, 146, 0.41);
+$global-transition:            200ms ease-in-out;

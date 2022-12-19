@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Border Radius
+   ========================================================================== */
+
+$radius: (
+  tag:        14px,
+  box:        20px,
+  button:     35px
+);
+
+
+/* Radius Helper
+   -------------------------------------------------------------------------- */
+
+@function radius($key) {
+  @if map-has-key($radius, $key) {
+    @return map-get($radius, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $radius.';
+
+  @return null;
+}

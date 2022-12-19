@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+/**
+ * Define image utilities such as square sizes and rounded images.
+ * This could apply to images as well as SVGs as a generic approach using
+ * global-spacing-sizes, added the ADDITIONAL, more specific, image-sizes map.
+ */
+
+$image-sizes: (
+  "tiny":      10px,
+  "small":     18px,
+  "normal":    22px,
+  "icon":      26px,
+  "thumb":    156px
+);
+
+@each $namee, $value in $image-sizes {
+
+  .size--#{$namee} {
+    width: $value;
+    height: $value;
+  }
+}
